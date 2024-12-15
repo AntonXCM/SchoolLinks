@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta content="Ссилки на уроки у зручній формі">
+    <title>Ссилки на уроки</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-family: "Fira Sans", sans-serif;
+            background-color: #ccceee;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            width: 100%;
+            height:20;
+            background-color: #7799FF;
+            padding: 15px;
+            box-shadow: 0 4px 6px #4bbbbbbb;
+            font-weight: 500;
+        }
+
+        .card {
+            width: 100%-30px;
+            height:unset;
+            background-color: #ddeeff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #4bbbbb4b;
+            transition: .3s ease-in-out;
+        }
+        .card:hover{
+            padding-right: 16px;
+            padding-left: 16px;
+            background-color: #ddfdff;
+        }
+        
+        .card h2 {
+            font-size: 40px;
+            margin: 0;
+            font-weight: 400;
+        }
+        .card b {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            margin: 5px 0;
+            font-weight: 375;
+            font-size: 30px;
+            gap: 20px;
+        }
+
+        .card a {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+            color: #7799FF;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        .card span{
+            transition: 0.5s;
+        }
+        .card span:active{
+            transform: scale(1.25);
+        }
+        .card span:hover{
+            color: #9999FF;
+        }
+
+        img {
+            margin-inline-end: 1;
+            width: 20px;
+        }
+
+        .cardLine {
+            display: grid;
+            align-items: stretch;
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .authorContact{
+            display: flex;
+            width: 100%-30px;
+	        height:unset;
+            background-color: #dcedfe;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #44bbbb44;
+            transition: .3s ease-in;
+        }
+        .authorContact:hover{
+            padding-right: 16px;
+            padding-left: 16px;
+            background-color: #ddfdff;
+            animation: shake 0.4s ease-in infinite;
+        }
+        @keyframes shake {
+            0% { 
+                transform: translateX(1px); 
+                padding-right: 17px;
+                padding-left: 15px; }
+            50% { 
+                transform: translateX(-1px); 
+                padding-right: 15px;
+                padding-left: 17px; }
+            100% { 
+                transform: translateX(1px); 
+                padding-right: 17px;
+                padding-left: 15px; }
+            }
+
+        .authorContact img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        .authorContactText txt {
+	    width: 100%;
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            margin: 5px 0;
+            font-weight: 375;
+            font-size: 20px;
+            gap: 20px;
+        }
+        
+        .authorContactText a{
+            display: block;
+            color: #000000;
+            text-decoration:wavy;
+            font-weight: 400;
+            font-size: 25px;
+            margin: 5px 0;
+        }
+
+        .authorContactText a:hover {
+            text-decoration: underline;
+            color: #7695FF;
+            font-weight: 300;
+        }
+        .highlight {
+            border: #ff5599;
+            border-style:outset;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> <label style="padding-inline-start: 40%;">-< 10-Б клас ссилки на онлайн >-</label> 
+        <label style="padding-left: 20%;">
+        <input type="checkbox" id="joinModeToggle" onclick="toggleJoinMode()"> Зайти через браузер
+        </label></div>
+    <div class="cardLine">
+        <div class="card" data-subject="Англ">
+            <h2>Англ</h2>
+
+            
+            <b>1 група</b>
+            <a data-link="3849887505", data-password="020954"><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+
+                <a><w onclick="openLink('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+                    <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                    <span class="material-symbols-outlined" onclick="copy('Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you', ' текст пісні')">share</span></a>    
+                
+            <b>2 група</b>
+            <a data-link="7061088347", data-password="F1buD5"><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+
+            <a data-classroomkey="gbpgqos"><w onclick="openLink('https://classroom.google.com/c/NzEwMjIwMzQxMzM0')">
+                <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+            
+        </div>
+        
+        <div class="card" data-subject="Укр">
+            <h2>Укр</h2>
+            
+            <b>1 група</b>
+            <a data-link="4255674049" data-password='jn8qW3'><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+            <a><w onclick="openLink('https://www.youtube.com/watch?v=PkT0PJwy8mI')">
+                <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                <span class="material-symbols-outlined" onclick="copy('Чувак, ты думал что-то здесь будет? О, нет.', '...')">share</span></a>    
+
+            <b>2 група</b>
+            <a data-link="5137691704" data-password='046682'><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+                
+            <a data-classroomkey="mhbsk7y"><w onclick="openLink('https://classroom.google.com/c/NzA5MTcxMTY2MjMw')">
+                <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>    
+        </div>
+
+        <div class="card" data-subject="Зар Літ">
+            <h2>Зар Літ</h2>
+            <a data-link="72197639739" data-password='qfTd4U'><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+                
+            <a data-classroomkey="whvhc7f"><w onclick="openLink('https://classroom.google.com/c/NzEwMDY0NjI5NjU2')">
+                <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>    
+        </div>
+
+        <div class="card" data-subject="Укр Літ">
+            <h2>Укр Літ</h2>
+            <a data-link="4255674049" data-password='jn8qW3'><w onclick="openZoom(this)">
+                <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+                <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+                <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+                
+            <a data-classroomkey="ar73nxf"><w onclick="openLink('https://classroom.google.com/c/NzEwMDY0NjI5NjU2')">
+                <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+                <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>    
+        </div>
+   
+    <div class="card" data-subject="Математика">
+        <h2>Математика</h2>
+    
+        <a data-link="9987586556" data-password='9wsq70'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+            
+        <a data-classroomkey="chnm737"><w onclick="openLink('https://classroom.google.com/c/NzA4OTU0MjQ3MzMy')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class Алгебра </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>    
+
+        <a data-classroomkey="feo7olv"><w onclick="openLink('https://classroom.google.com/c/NzA4OTY5Mzc1OTYx')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class Геометрія </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+
+    
+    <div class="card" data-subject="Фізика">
+        <h2>Фізика</h2>
+        
+        <a data-link="5828892173" data-password='2NsGEu'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span></a>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span>
+            
+        <a data-classroomkey="y64otb3"><w onclick="openLink('https://classroom.google.com/c/NzA5MjE5Mjk3MDE5')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    
+    <div class="card" data-subject="Хімія">
+        <h2>Хімія</h2>
+        
+        <a data-link="86259724954" data-password='1101'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+            
+        <a data-classroomkey="swbdevy"><w onclick="openLink('https://classroom.google.com/c/NzA5Njk1NTEyNTc0')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    
+    <div class="card" data-subject="Біологія">
+        <h2>Біологія</h2>
+        
+        <a data-link="6628426320" data-password='545590'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+        
+            <a data-classroomkey="gcsqqp6"><w onclick="openLink('https://classroom.google.com/c/NzA4ODkyODUxNzUy')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+ 
+    <div class="card" data-subject="Географія">
+        <h2>Географія</h2>
+    
+        <a data-link="5898188513" data-password='173883'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+        
+            <a data-classroomkey="acid23l"><w onclick="openLink('https://classroom.google.com/c/NzA5MTczMTk5MjA1')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    <div class="card" data-subject="Історія">
+        <h2>Історія</h2>
+        
+        <a href="https://us05web.zoom.us/j/2673938451?pwd=d1dDV29nUklueVZNTGtHUUsvM2lxUT09&omn=82700239711"><img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </a>
+        
+        <a data-classroomkey="wcygv5t"><w onclick="openLink('https://classroom.google.com/c/NzA5MDM2NDkyNjg5')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    
+    <div class="card" data-subject="Гром. Осв">
+        <h2>Гром. Осв</h2>
+        
+        <a href="https://us05web.zoom.us/j/2673938451?pwd=d1dDV29nUklueVZNTGtHUUsvM2lxUT09&omn=82700239711"><img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </a>
+        
+        <a data-classroomkey="gp3mwbk"><w onclick="openLink('https://classroom.google.com/c/NzA5MDQ0MDI0MjEy')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    
+    
+    <div class="card" data-subject="Захист">
+        <h2>Захист</h2>
+        <a href="https://zoom.us/j/98862088166?pwd=kTXeGS4KpiqN9M8oGZe553JHaKcqh9.1"><img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </a>
+    
+        <a data-classroomkey="Не знаю"><w onclick="openLink('https://classroom.google.com/c/NzEwMjE2MTM4NDEy')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    <div class="card" data-subject="Інфр">
+        <h2>Інфр</h2>
+        
+        <b>1 група</b>
+        <a data-link="7547153057" data-password='654321'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+
+        <a data-classroomkey="lmu55kz"><w onclick="openLink('https://drive.google.com/file/d/18ILbdDRPnkWc4kz4TfBghrxOQI2fZtOi/view?usp=sharing')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+
+
+        <b>2 група</b>
+        <a data-link="9987586556" data-password='451319'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span>
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span></a>
+
+        <a data-classroomkey="z3yf4g5"><w onclick="openLink('https://classroom.google.com/c/NzA4OTcwNTA3NzI2')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+
+    </div>
+
+
+    <div class="card" data-subject='Мистецтво'>
+        <h2>Мистецтво</h2>
+    
+        <a data-link="7658622678" data-password='6ayWKf'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+
+        <a data-classroomkey="nl7o7ik"><w onclick="openLink('https://classroom.google.com/c/NzA5NjkxNDA4NTIx')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+
+    <div class="card" data-subject="Фізра">
+        <h2>Фізра</h2>
+    
+        <a data-link="6145338698" data-password='111111'><w onclick="openZoom(this)">
+            <img src="https://cdn.worldvectorlogo.com/logos/zoom-app.svg" alt="Зум"> Zoom </w> 
+            <span class="material-symbols-outlined" onclick="copyPassword(this)">key</span>
+            <span class="material-symbols-outlined" onclick="copyShareZoom(this)">share</span></a>
+
+        <a data-classroomkey="6sqnabl"><w onclick="openLink('https://classroom.google.com/c/NzEwMzcwMTAyOTQ1')">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Класс"> Class </w> 
+            <span class="material-symbols-outlined" onclick="copyClassroomLink(this)">share</span></a>
+    </div>
+    <div class="authorContact">
+        
+        <div class="authorContactText">
+            <txt>  Карта тривог: </txt>
+            
+            <img id="trivoga" src="https://ubilling.net.ua/aerialalerts/?map=true" alt="Тривоги">
+        </div>
+    </div>
+    <div class="authorContact">
+        
+        <div class="authorContactText">
+            <txt>Гра, в яку ви маєте зіграти: </txt>
+            <iframe frameborder="0" src="https://itch.io/embed/2784890?linkback=true&amp;border_width=0&amp;bg_color=ddeeff&amp;fg_color=129eda&amp;link_color=00fff1&amp;border_color=26cc3c" width=100% height=flex><a href="https://rob-demo.itch.io/slime-king">Slime King від Антона Приходченко і Георгія Ярощука</a></iframe>
+        </div>
+    </div>
+
+<div class="authorContact">
+    
+    <div class="authorContactText">
+        <txt>  Сайт зроблений Приходченко Антоном. Ви можете зв'язатися з ним через ці ссилки: </txt>
+        <a href="https://linktr.ee/antonxcm"> linktr.ee/antonxcm </a>
+        
+        <img src="https://lh3.googleusercontent.com/a/ACg8ocKSnVTtdBbTaf2ejDzQgdAjMM53dki2P_8sGxQ994mr35VUylbj=s288-c-no" alt="Аватарка Антона"></div>
+    </div>
+</div>
+</body>
+
+<script>
+    class AppSettings {
+        static get inAppJoinMode() {
+            return JSON.parse(localStorage.getItem("inAppJoinMode")) || false;
+        }
+        static set inAppJoinMode(value) {
+            localStorage.setItem("inAppJoinMode", JSON.stringify(value));
+        }
+    }
+    document.getElementById("joinModeToggle").checked = AppSettings.inAppJoinMode;
+    
+
+    const schedule = [
+        
+        // Понеділок
+        { lesson: "Англ", day: 1, start: "08:30", end: "10:10" },  
+        { lesson: "Математика", day: 1, start: "10:20", end: "12:05" },
+        { lesson: "Географія", day: 1, start: "12:20", end: "13:05" },
+        { lesson: "Укр", day: 1, start: "13:15", end: "14:55" },
+        
+        // Вівторок
+        { lesson: "Укр", day: 2, start: "08:30", end: "09:15" },
+        { lesson: "Укр Літ", day: 2, start: "09:25", end: "10:10" },
+        { lesson: "Фізра", day: 2, start: "10:20", end: "11:05" },
+        { lesson: "Зар Літ", day: 2, start: "11:20", end: "12:05" },
+        { lesson: "Інфр", day: 2, start: "12:20", end: "13:05" },
+        { lesson: "Фізика", day: 2, start: "13:15", end: "14:00" },
+        { lesson: "Математика", day: 2, start: "14:10", end: "15:55" },
+        
+        // Середа
+        { lesson: "Біологія", day: 3, start: "08:30", end: "10:10" },
+        { lesson: "Фізра", day: 3, start: "10:20", end: "12:05" },
+        { lesson: "Захист", day: 3, start: "12:20", end: "13:05" },
+        { lesson: "Історія", day: 3, start: "13:15", end: "14:55" },
+        { lesson: "Географія", day: 3, start: "15:05", end: "15:50" },
+
+        // Четвер
+        { lesson: "Хімія", day: 4, start: "08:30", end: "09:15" },
+        { lesson: "Фізра", day: 4, start: "09:25", end: "10:10" },
+        { lesson: "Англ", day: 4, start: "10:20", end: "12:05" },
+        { lesson: "Історія", day: 4, start: "12:20", end: "13:05" },
+        { lesson: "Укр", day: 4, start: "13:15", end: "14:00" },
+        { lesson: "Фізика", day: 4, start: "14:10", end: "14:55" },
+        { lesson: "Англ", day: 4, start: "15:05", end: "15:50" },
+
+        // П'ятниця
+        { lesson: "Гром. Осв", day: 5, start: "08:30", end: "09:15" },
+        { lesson: "Зар Літ", day: 5, start: "09:25", end: "10:10" },
+        { lesson: "Мистецтво", day: 5, start: "10:20", end: "12:05" },
+        { lesson: "Фізра", day: 5, start: "12:20", end: "13:05" },
+        { lesson: "Фізика", day: 5, start: "13:15", end: "14:00" },
+        { lesson: "Укр Літ", day: 5, start: "14:10", end: "14:55" },
+    ];
+    updateCurrentLessonPanel();
+    //povitranaTrivoga();
+    function updateCurrentLessonPanel() {
+        const currentLesson = getCurrentLesson();
+        const panels = document.querySelectorAll('.card');
+
+        panels.forEach(panel => {
+            if (panel.dataset.subject === currentLesson) {
+                panel.classList.add('highlight');
+            } else {
+                panel.classList.remove('highlight');
+            }
+    });
+        function getCurrentLesson() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const currentTime = now.toTimeString().slice(0, 5);
+            console.log(currentDay, currentTime);
+            for (const [lesson, day, start, end] of schedule.entries()) {
+                if (day.day === currentDay)
+                    if(currentTime >= day.start && currentTime <= day.end) {
+                        return day.lesson;
+                }
+            }
+            return null;
+        }
+    }
+    function povitranaTrivoga() {
+        const img = document.getElementById("trivoga");
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            ctx.drawImage(img, 0, 0);
+
+            const pixel = ctx.getImageData(660, 360, 1, 1).data;
+
+            const rgbaToHex = (r, g, b) => {
+                return `${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase()}`;
+            };
+
+            const pixelColor = rgbaToHex(pixel[0], pixel[1], pixel[2]);
+
+            // Сравниваем цвет пикселя с заданным HEX кодом
+            if (pixelColor === "DD5522") {
+                console.log('Цвет пикселя совпадает с HEX кодом');
+            } else {
+                console.log('Цвет пикселя НЕ совпадает с HEX кодом');
+            }
+        };
+
+    }
+
+    function toggleJoinMode() {
+        AppSettings.inAppJoinMode = !AppSettings.inAppJoinMode;
+    }
+
+    function openZoom(linkText) {
+        linkText = linkText.closest('[data-link]');
+        password = copyPassword(linkText);
+        link = linkText.getAttribute('data-link')
+        openLink(AppSettings.inAppJoinMode ? 'https://app.zoom.us/wc/'+link+'/join' : 'https://us05web.zoom.us/j/'+link, '_blank');
+    }
+
+    function openLink(link) {
+        window.open(link, '_blank');
+    }
+    
+    function copyPassword(linkText){
+        linkText = linkText.closest('[data-password]');
+        
+        return copy(linkText.getAttribute('data-password'),' код');
+    }
+
+    function copy(str, strName){
+        var copyAllowed = false;
+        navigator.permissions.query({name: 'clipboard-write'}).then(copyAllowed = true);
+        if(!copyAllowed) {
+            window.alert("Ваш браузер не підтримує копіювання");
+            return str;
+        }
+        try
+        {
+            navigator.clipboard.writeText(str);
+        }
+        catch(exception){
+            window.alert(exception);1
+        }
+        window.alert('Ваш'+strName+': '+ str+'. \nВін скопійован до вашого буферу');
+        return str;
+    }
+
+    function copyShareZoom(linkText){
+        linkText = linkText.closest('[data-link]');
+        
+        return copy('Код зум: '+linkText.getAttribute('data-link')+' Пароль зум: '+linkText.getAttribute('data-password'),'а ссилка у зум');
+    }
+
+    function copyClassroomLink(linkText){
+        linkText = linkText.closest('[data-classroomkey]');
+        
+        return copy('Ключ доступа: '+linkText.getAttribute('data-classroomkey'),' код классрума');
+    }
+
+    </script>
+</html>
